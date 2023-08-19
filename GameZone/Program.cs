@@ -10,6 +10,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<ICategoriesService, CategoriesService>();
+builder.Services.AddScoped<IDevicesService, DevicesService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
