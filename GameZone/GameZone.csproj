@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\images\games\" />
+  </ItemGroup>
+
 </Project>

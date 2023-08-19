@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace GameZone.Services;
+﻿namespace GameZone.Services;
 
 public class DevicesService : IDevicesService
 {
