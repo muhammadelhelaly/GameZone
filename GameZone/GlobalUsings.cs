@@ -6,3 +6,4 @@ global using GameZone.Services;
 global using GameZone.Models;
 global using GameZone.ViewModels;
 global using GameZone.Data;
+global using GameZone.Settings;

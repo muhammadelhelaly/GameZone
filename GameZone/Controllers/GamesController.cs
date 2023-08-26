@@ -3,11 +3,11 @@ public class GamesController : Controller
 {
     private readonly ICategoriesService _categoriesService;
     private readonly IDevicesService _devicesService;
-    private readonly IGamesServices _gamesServices;
+    private readonly IGamesService _gamesServices;
 
     public GamesController(ICategoriesService categoriesService, 
         IDevicesService devicesService, 
-        IGamesServices gamesServices)
+        IGamesService gamesServices)
     {
         _categoriesService = categoriesService;
         _devicesService = devicesService;
