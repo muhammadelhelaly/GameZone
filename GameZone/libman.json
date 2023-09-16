@@ -20,6 +20,14 @@
         "js/select2.min.js",
         "css/select2.min.css"
       ]
+    },
+    {
+      "library": "sweetalert2@11.7.28",
+      "destination": "wwwroot/lib/sweetalert2/",
+      "files": [
+        "sweetalert2.min.js",
+        "sweetalert2.min.css"
+      ]
     }
   ]
 }

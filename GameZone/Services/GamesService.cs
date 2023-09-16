@@ -95,6 +95,29 @@ public class GamesService : IGamesService
         }
     }
 
+    public bool Delete(int id)
+    {
+        var isDeleted = false;
+
+        var game = _context.Games.Find(id);
+
+        if (game is null)
+            return isDeleted;
+
+        _context.Remove(game);
+        var effectedRows = _context.SaveChanges();
+
+        if(effectedRows > 0)
+        {
+            isDeleted = true;
+
+            var cover = Path.Combine(_imagesPath, game.Cover);
+            File.Delete(cover);
+        }
+
+        return isDeleted;
+    }
+
     private async Task<string> SaveCover(IFormFile cover)
     {
         var coverName = $"{Guid.NewGuid()}{Path.GetExtension(cover.FileName)}";
