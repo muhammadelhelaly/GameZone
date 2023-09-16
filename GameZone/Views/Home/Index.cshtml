@@ -17,7 +17,7 @@ else
         @foreach(var game in Model)
         {
             <div class="col-lg-4 col-md-6">
-                <a class="card border-success mb-3 text-decoration-none" asp-controller="Games" asp-action="Details" asp-route-id="@game.Id">
+                <a class="card border-success mb-3 text-decoration-none rounded-3 overflow-hidden" asp-controller="Games" asp-action="Details" asp-route-id="@game.Id">
                     <div class="card-body" style="background-image: url(@($"{FileSettings.ImagesPath}/{game.Cover}")); background-size: cover; background-position: center; height: 500px;">
                        <div class="d-flex align-items-end h-100">
                             <span class="badge bg-secondary rounded-0 fs-3">@game.Category?.Name</span>
