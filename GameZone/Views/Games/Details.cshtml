@@ -1,0 +1,28 @@
+﻿@model Game
+
+@{
+    ViewData["Title"] = Model.Name; 
+}
+
+<div class="card border-success rounded-4 mt-5 overflow-hidden">
+    <div class="card-body p-0">
+        <div class="row">
+            <div class="col-md-8 px-5 py-4 d-flex flex-column justify-content-between">
+                <div>
+                    <h1 class="text-success fw-bolder">@Model.Name</h1>
+                    <span class="badge bg-info fs-5 mb-4">@Model.Category?.Name</span>
+                    <p class="fs-5">@Model.Description</p>
+                </div>
+                <div>
+                    @foreach (var gameDevice in Model.Devices)
+                    {
+                        <i class="@gameDevice.Device.Icon me-2 fs-1 text-secondary"></i>
+                    }
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="@($"{FileSettings.ImagesPath}/{Model.Cover}")" alt="@Model.Name" class="w-100" />
+            </div>
+        </div>
+    </div>
+</div>
