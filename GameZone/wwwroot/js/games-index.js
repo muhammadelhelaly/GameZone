@@ -35,7 +35,7 @@ $(document).ready(function () {
                     error: function () {
                         swal.fire(
                             'Oooops...',
-                            'Somethings went worng.',
+                            'Something went wrong.',
                             'error'
                         );
                     }
